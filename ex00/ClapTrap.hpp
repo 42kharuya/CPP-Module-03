@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <limits>
 
 class ClapTrap
 {
 	private:
 	 std::string _name;
-	 long _hitPoints;
-	 long _energyPoints;
+	 long _hitPoints; //HP
+	 long _energyPoints; //MP
 	 long _attackDamage;
 
 	public:
@@ -19,14 +20,11 @@ class ClapTrap
 	 ClapTrap(const ClapTrap &other);
 	 ClapTrap& operator=(const ClapTrap &other);
 
+	 bool canAction();
+
 	 void attack(const std::string& target);
 	 void takeDamage(unsigned int amount);
 	 void beRepaired(unsigned int amount);
-
-	 std::string getName() const;
-	 long getHitPoints() const;
-	 long getEnergyPoints() const;
-	 long getAttackDamage() const;
 };
 
 #endif // _CLAPTRAP_H_
