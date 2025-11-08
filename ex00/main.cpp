@@ -3,8 +3,11 @@
 int main(void)
 {
 	{
-		std::cout << "ver: no Hit Points-----------------------------------" << std::endl;
+		std::cout << "------------------ ver: no Hit Points ------------------" << std::endl;
 		ClapTrap bob("Bob");
+
+		bob.showStatus();
+
 		bob.attack("John");
 		bob.takeDamage(100);
 		bob.attack("John");
@@ -14,8 +17,11 @@ int main(void)
 	}
 
 	{
-		std::cout << "\nver: no Energy Points--------------------------------" << std::endl;
+		std::cout << "\n------------------ ver: no Energy Points ------------------" << std::endl;
 		ClapTrap bob("Bob");
+
+		bob.showStatus();
+
 		bob.attack("Jon");
 		bob.attack("Jon");
 		bob.attack("Jon");
@@ -32,8 +38,11 @@ int main(void)
 	}
 
 	{
-		std::cout << "\nver: will be repaired--------------------------------" << std::endl;
+		std::cout << "\n------------------ ver: will be repaired ------------------" << std::endl;
 		ClapTrap bob("Bob");
+
+		bob.showStatus();
+
 		bob.attack("John");
 		bob.takeDamage(9);
 		bob.attack("John");

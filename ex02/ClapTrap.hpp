@@ -20,7 +20,7 @@ class ClapTrap
 
 	 void showStatus() const;
 
-	private:
+	protected:
 	 std::string _name;
 	 long _hitPoints; //HP
 	 long _energyPoints; //MP
