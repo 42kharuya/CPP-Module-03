@@ -24,4 +24,16 @@ int main(void)
 
 		bob.guardGate();
 	}
+
+	{
+		std::cout << "\n------------------- ver:3 -------------------" << std::endl;
+		ClapTrap *bob = new ScavTrap("Bob");
+
+		bob->showStatus();
+
+		bob->attack("John");
+		dynamic_cast<ScavTrap*>(bob)->guardGate();
+
+		delete bob;
+	}
 }

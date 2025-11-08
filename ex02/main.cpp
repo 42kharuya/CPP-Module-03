@@ -1,11 +1,11 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
 	// テストケース作る
 	{
 		std::cout << "------------------- ver:1 -------------------" << std::endl;
-		ScavTrap bob("Bob");
+		FragTrap bob("Bob");
 
 		bob.showStatus();
 
@@ -19,10 +19,22 @@ int main(void)
 
 	{
 		std::cout << "\n------------------- ver:2 -------------------" << std::endl;
-		ScavTrap bob("Bob");
+		FragTrap bob("Bob");
 
 		bob.showStatus();
 
-		bob.guardGate();
+		bob.highFivesGuys();
+	}
+
+	{
+		std::cout << "\n------------------- ver:3 -------------------" << std::endl;
+		ClapTrap *bob = new FragTrap("Bob");
+
+		bob->showStatus();
+
+		bob->attack("John");
+		dynamic_cast<FragTrap*>(bob)->highFivesGuys();
+
+		delete bob;
 	}
 }

@@ -10,11 +10,11 @@ class ClapTrap
 	public:
 	 ClapTrap();
 	 ClapTrap(const std::string &name);
-	 ~ClapTrap();
+	 virtual ~ClapTrap();
 	 ClapTrap(const ClapTrap &other);
 	 ClapTrap& operator=(const ClapTrap &other);
 
-	 void attack(const std::string& target);
+	 virtual void attack(const std::string& target);
 	 void takeDamage(unsigned int amount);
 	 void beRepaired(unsigned int amount);
 
@@ -22,8 +22,8 @@ class ClapTrap
 
 	protected:
 	 std::string _name;
-	 long _hitPoints; //HP
-	 long _energyPoints; //MP
+	 long _hitPoints;
+	 long _energyPoints;
 	 long _attackDamage;
 
 	 bool canAction() const;

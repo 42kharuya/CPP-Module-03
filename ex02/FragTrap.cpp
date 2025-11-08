@@ -1,4 +1,4 @@
-#include "FragTrap.cpp"
+#include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap("") {
 	this->_hitPoints = 100;
@@ -10,8 +10,8 @@ FragTrap::FragTrap() : ClapTrap("") {
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
 	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 	std::cout << "FragTrap " << this->_name << " constructor called"
               << std::endl;
 }
@@ -45,7 +45,7 @@ void FragTrap::attack(const std::string &target) {
 }
 
 void FragTrap::highFivesGuys() {
-	std::cout << "FragTrap " << this->_name << " is requesting a positive high five!";
+	std::cout << "FragTrap " << this->_name << " is requesting a positive high five!" << std::endl;
 }
 
 bool FragTrap::canAction() const {

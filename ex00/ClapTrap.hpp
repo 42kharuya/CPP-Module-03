@@ -22,8 +22,8 @@ class ClapTrap
 
 	private:
 	 std::string _name;
-	 long _hitPoints; //HP
-	 long _energyPoints; //MP
+	 long _hitPoints;
+	 long _energyPoints;
 	 long _attackDamage;
 
 	 bool canAction() const;
